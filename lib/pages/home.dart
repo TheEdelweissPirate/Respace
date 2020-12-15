@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
                 width: 200.0,),
               ),
               Padding(
-                       padding: const EdgeInsets.fromLTRB(50, 10, 40,0),
+                       padding: const EdgeInsets.fromLTRB(60, 10, 50,0),
                        child: ButtonTheme(
                         minWidth: 200.0,
                         height: 50.0,
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                 ),
                      ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(50, 10, 40,0),
+                padding: const EdgeInsets.fromLTRB(60, 10, 50,0),
                 child: ButtonTheme(
                   minWidth: 254.0,
                   height: 50.0,
