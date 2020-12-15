@@ -82,6 +82,12 @@ class _HomeState extends State<Home> {
                         child: RaisedButton.icon(onPressed: (){
                           showSearch(context: context, delegate: DataSearch());
                         },
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(28.0),
+                              side: BorderSide(color: Colors.yellowAccent, style: BorderStyle.solid,
+                              ),
+                          ),
+
                           icon: Icon(Icons.search,
                           color: Colors.amberAccent),
                           label: Text('Search for a business',
@@ -102,6 +108,11 @@ class _HomeState extends State<Home> {
                   child: RaisedButton.icon(onPressed: (){
                     showSearch(context: context, delegate: DataSearch());
                   },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(28.0),
+                      side: BorderSide(color: Colors.yellowAccent, style: BorderStyle.solid,
+                      ),
+                    ),
                     icon: Icon(Icons.location_on_rounded,
                         color: Colors.amberAccent),
                     label: Text('  Search by location  ',
