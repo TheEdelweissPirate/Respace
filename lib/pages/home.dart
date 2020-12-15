@@ -1,3 +1,5 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -7,6 +9,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +91,7 @@ class _HomeState extends State<Home> {
                               ),
                           ),
 
-                          icon: Icon(Icons.search,
+                          icon: Icon(Icons.search_rounded,
                           color: Colors.amberAccent),
                           label: Text('Search for a business',
                           style: TextStyle(
@@ -106,7 +109,7 @@ class _HomeState extends State<Home> {
                   minWidth: 254.0,
                   height: 50.0,
                   child: RaisedButton.icon(onPressed: (){
-                    showSearch(context: context, delegate: DataSearch());
+                    Navigator.pushNamed(context, '/location_map');
                   },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(28.0),
@@ -116,6 +119,31 @@ class _HomeState extends State<Home> {
                     icon: Icon(Icons.location_on_rounded,
                         color: Colors.amberAccent),
                     label: Text('  Search by location  ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontFamily: 'Quicksand',
+                        fontWeight: FontWeight.w900,),
+                    ),
+                    color: Colors.orangeAccent,),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(60, 10, 50,0),
+                child: ButtonTheme(
+                  minWidth: 254.0,
+                  height: 50.0,
+                  child: RaisedButton.icon(onPressed: (){
+                    showSearch(context: context, delegate: DataSearch());
+                  },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(28.0),
+                      side: BorderSide(color: Colors.yellowAccent, style: BorderStyle.solid,
+                      ),
+                    ),
+                    icon: Icon(Icons.search_rounded,
+                        color: Colors.amberAccent),
+                    label: Text('Search for a product',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
