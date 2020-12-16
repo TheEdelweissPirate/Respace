@@ -1,8 +1,14 @@
-import 'dart:async';
+//THIS LOCATION MAP PAGE IS A COMPLETE MESS RN. NOT USING IT AS OF NOW.
+//DO NOT USE THIS PAGE ANYWHWERE
+//IGNORE THIS
+//THIS IS KEPT JUST FOR SAFETY
 
+
+import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 
 class LocationMap extends StatefulWidget {
   @override
@@ -15,6 +21,8 @@ class _LocationMapState extends State<LocationMap> {
   final Set<Marker> _markers = {};
   LatLng _lastMapPosition = _center;
   MapType _currentMapType = MapType.normal;
+
+
 
   _onMapCreated(GoogleMapController controller){
     _controller.complete(controller);
@@ -62,41 +70,52 @@ class _LocationMapState extends State<LocationMap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Choose a location'),
-          backgroundColor: Colors.orangeAccent,
-        ),
-        body: Stack(
-          children: <Widget>[
-            GoogleMap(
-              onMapCreated: _onMapCreated,
-              initialCameraPosition: CameraPosition(
-                target: _center,
-                zoom: 11.0,
-              ),
-              mapType: _currentMapType,
-              markers: _markers,
-              onCameraMove: _onCameraMove,
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Align(
-                alignment: Alignment.topRight,
-                child: Column(
-                  children: <Widget>[
-                    button(_onMapTypeButtonPressed, Icons.map_rounded),
-                    SizedBox(height: 16.0,),
-                    button(_onAddMarkerButtonPressed, Icons.add_location_rounded),
+      appBar: AppBar(
+        title: Text('Choose a location'),
+        backgroundColor: Colors.orangeAccent,
+        actions: <Widget>[
+          Container(
+            child: RaisedButton(
 
-                  ],
-                ),
-              ),
-
+              onPressed: (){
+                Navigator.pushNamed(context, '/choose_location');
+              },
             )
-          ],
-        ),
-      );
+          )
+        ],
+      ),
+      body: Stack(
+        children: <Widget>[
+          GoogleMap(
+            onMapCreated: _onMapCreated,
+            initialCameraPosition: CameraPosition(
+              target: _center,
+              zoom: 11.0,
+            ),
+            mapType: _currentMapType,
+            markers: _markers,
+            onCameraMove: _onCameraMove,
+          ),
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Column(
+                children: <Widget>[
+                  button(_onMapTypeButtonPressed, Icons.map_rounded),
+                  SizedBox(height: 16.0,),
+                  button(_onAddMarkerButtonPressed, Icons.add_location_rounded),
+
+                ],
+              ),
+            ),
+
+          )
+        ],
+      ),
+    );
 
 
   }
 }
+

@@ -13,21 +13,21 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: <Widget>[
-          Icon(Icons.home,color: Colors.orangeAccent[100],size: 40.0,),
-        ],
-        title: Text('Home',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 20.0,
-          fontFamily: 'Quicksand',
-          fontWeight: FontWeight.w900,)
-          ,),
-        backgroundColor: Colors.orangeAccent[400],
-      ),
+        appBar: AppBar(
+          actions: <Widget>[
+            Icon(Icons.home,color: Colors.orangeAccent[100],size: 40.0,),
+          ],
+          title: Text('Home',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+              fontFamily: 'Quicksand',
+              fontWeight: FontWeight.w900,)
+            ,),
+          backgroundColor: Colors.orangeAccent[400],
+        ),
         drawer: Drawer(
-          
+
           child: ListView(
             // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
@@ -35,13 +35,13 @@ class _HomeState extends State<Home> {
               SizedBox(height: 60.0,),
               ListTile(
                 leading: Icon(Icons.person_rounded,
-                color: Colors.orange),
+                    color: Colors.orange),
                 title: Text('My Profile',
-                style: TextStyle(
-                color: Colors.orange,
-                  fontSize: 20.0,
-                  fontFamily: 'Quicksand',
-                  fontWeight: FontWeight.w900,),),
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 20.0,
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w900,),),
                 onTap: () {
                   // Update the state of the app.
                   // ...
@@ -74,42 +74,42 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(40, 20, 40,0),
                 child: Image.asset('images/respace logo transparent.png',
-                height: 200.0,
-                width: 200.0,),
+                  height: 200.0,
+                  width: 200.0,),
               ),
               Padding(
-                       padding: const EdgeInsets.fromLTRB(60, 10, 50,0),
-                       child: ButtonTheme(
-                        minWidth: 200.0,
-                        height: 50.0,
-                        child: RaisedButton.icon(onPressed: (){
-                          showSearch(context: context, delegate: DataSearch());
-                        },
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(28.0),
-                              side: BorderSide(color: Colors.yellowAccent, style: BorderStyle.solid,
-                              ),
-                          ),
+                padding: const EdgeInsets.fromLTRB(60, 10, 50,0),
+                child: ButtonTheme(
+                  minWidth: 200.0,
+                  height: 50.0,
+                  child: RaisedButton.icon(onPressed: (){
+                    showSearch(context: context, delegate: DataSearch());
+                  },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(28.0),
+                      side: BorderSide(color: Colors.yellowAccent, style: BorderStyle.solid,
+                      ),
+                    ),
 
-                          icon: Icon(Icons.search_rounded,
-                          color: Colors.amberAccent),
-                          label: Text('Search for a business',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontFamily: 'Quicksand',
-                            fontWeight: FontWeight.w900,),
-                          ),
-                        color: Colors.orangeAccent,),
+                    icon: Icon(Icons.search_rounded,
+                        color: Colors.amberAccent),
+                    label: Text('Search for a business',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontFamily: 'Quicksand',
+                        fontWeight: FontWeight.w900,),
+                    ),
+                    color: Colors.orangeAccent,),
                 ),
-                     ),
+              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(60, 10, 50,0),
                 child: ButtonTheme(
                   minWidth: 254.0,
                   height: 50.0,
                   child: RaisedButton.icon(onPressed: (){
-                    Navigator.pushNamed(context, '/location_map');
+                    Navigator.pushNamed(context, '/choose_location');
                   },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(28.0),
@@ -224,7 +224,7 @@ class DataSearch extends SearchDelegate<String> {
       progress: transitionAnimation,
     ),
         onPressed: () {
-      close(context, null);
+          close(context, 'null');
         });
   }
 
@@ -232,14 +232,14 @@ class DataSearch extends SearchDelegate<String> {
   Widget buildResults(BuildContext context) {
     //show some result based on selection
     return Container(
-        height: 100.0,
-    width: 100.0,
+      height: 100.0,
+      width: 100.0,
       child: Card(
-      color: Colors.orangeAccent[200],
-      child: Center(
-        child:Text('Respective Profile will be shown'),
-      ) ,
-    ),);
+        color: Colors.orangeAccent[200],
+        child: Center(
+          child:Text('Respective Profile will be shown'),
+        ) ,
+      ),);
 
   }
 
@@ -263,16 +263,16 @@ class DataSearch extends SearchDelegate<String> {
           title: RichText(text: TextSpan(
             text: suggestionList[index].substring(0,query.length),
             style: TextStyle(
-                color: Colors.orangeAccent,fontWeight: FontWeight.bold,
+              color: Colors.orangeAccent,fontWeight: FontWeight.bold,
               fontFamily: 'Quicksand', fontSize: 20.0,
             ),
-              children: [TextSpan(
+            children: [TextSpan(
               text: suggestionList[index].substring(query.length),
-            style: TextStyle(
-              color: Colors.grey[800],
-              fontFamily: 'Quicksand',fontSize: 20.0,
-            ),
-          )],
+              style: TextStyle(
+                color: Colors.grey[800],
+                fontFamily: 'Quicksand',fontSize: 20.0,
+              ),
+            )],
           ),),
         ),
       itemCount: suggestionList.length,
