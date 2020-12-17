@@ -61,10 +61,26 @@ class _HomeState extends State<Home> {
                   // ...
                 },
               ),
+              ListTile(
+                leading: Icon(Icons.help_rounded,
+                    color: Colors.orange),
+                title: Text('Help',
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 20.0,
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w900,),),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
             ],
           ),
 
-        ),
+          ),
+
+
 
 
         body: SafeArea(
