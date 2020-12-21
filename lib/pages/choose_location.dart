@@ -44,7 +44,6 @@ class _ChooseLocationState extends State<ChooseLocation> {
                   apiKey: "pk.eyJ1IjoidmFyYWRhaCIsImEiOiJja2lycjU4emEwZGZtMnBzYzhrcTJ5YTN3In0.QY3-YwtFpHOATLUAgBX0ow",
                   hint: "Start typing...",
                   onSelect: (place) {
-                    // TODO : Process the result gotten
                     _startPointController.text = place.placeName;
                   },
                   limit: 10,

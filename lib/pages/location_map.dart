@@ -1,9 +1,3 @@
-//THIS LOCATION MAP PAGE IS A COMPLETE MESS RN. NOT USING IT AS OF NOW.
-//DO NOT USE THIS PAGE ANYWHWERE
-//IGNORE THIS
-//THIS IS KEPT JUST FOR SAFETY
-
-
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +53,7 @@ class _LocationMapState extends State<LocationMap> {
         side: BorderSide(color: Colors.yellowAccent, style: BorderStyle.solid,
         ),
       ),
-      onPressed: function,
+      onPressed: function(),
       materialTapTargetSize: MaterialTapTargetSize.padded,
       fillColor: Colors.orangeAccent,
       child: Icon(icon, size:26.0, color: Colors.yellow[200],),
@@ -114,8 +108,6 @@ class _LocationMapState extends State<LocationMap> {
         ],
       ),
     );
-
-
   }
 }
 
