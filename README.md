@@ -29,10 +29,18 @@ According to a study in the Economic Times, online sales in India accounted for 
 <h2> Goals of this project: </h2>
 
 * [x] To bring in maximum number of small producers on the app.
-* [x] To build a full fledge profile of the producer which shows different products available with him, its reviews and ratings from fellow buyers, and other different features.
+* [x] To build a full fledged profile of the producer which shows different products available with him, its reviews and ratings from fellow buyers, and other different features.
 * [x] To provide the retailers as well as the producers a refined search on the basis of their search parameters - name, location, business tags, ratings and reviews.
 * [x] To provide interactive map feature so that the users of the app can easily find out the other users which can be in the region of their business interest.
 * [x] To create a messaging platform for the retailers and producers to connect on the app itself.
+
+<h2> How to use Respace </h2>
+
+* [x] Producers can register their account on Respace, login and update their business details like business name, owner name, profile photo etc.
+* [x] They can set up their business profile with a listing of their various products and product details like price, availability and so on.
+* [x] Retailers i.e. offline shop owners can log in to Respace and search for small businesses near them.
+* [x] Retailers can then buy products from the small businesses and stock them in their shops to sell to customers.
+* [x] In this way, small businesses can make their products reach more people and shop owners can help support and grow local producers :)
 
 <h2> How Respace works: </h2>
 <div align="center">
