@@ -60,7 +60,7 @@ According to a study in the Economic Times, online sales in India accounted for 
   <img src="./GIFs/Search.gif" width="250">
   <br>
   <br>
-  <p> To see the complete working of the app, <a  href="https://youtu.be/v-0iG_lroEk">click here</a>. </p>
+  <p> To see the complete working of the app, <a  href="https://www.youtube.com/watch?v=wFY0lCi0DjQ&feature=youtu.be">click here</a>. </p>
 </div>
 
 <h2> Future Scope of this project: </h2>
